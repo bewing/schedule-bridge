@@ -1,0 +1,283 @@
+{
+  "1000_0": [
+    {
+      "date": "Sat, Jun 24, 2023 - 1 Game",
+      "games": [
+        {
+          "number": "4",
+          "scheduleStartTime": "2023-06-24T22:40:00Z",
+          "status": "scheduled",
+          "id": "517",
+          "visitorTeam": {
+            "id": "19",
+            "name": "Bruins",
+            "logo": null,
+            "division": "Original Six"
+          },
+          "homeTeam": {
+            "id": "15",
+            "name": "Black Hawks",
+            "logo": null,
+            "division": "Original Six"
+          },
+          "time": "10:40 PM",
+          "date": "Jun 24, 2023",
+          "location": "West Rink",
+          "type": "Regular Season",
+          "broadcastProvider": {
+            "broadcaster": "",
+            "link": ""
+          }
+        }
+      ]
+    },
+    {
+      "date": "Wed, Jul 12, 2023 - 1 Game",
+      "games": [
+        {
+          "number": "6",
+          "scheduleStartTime": "2023-07-12T20:50:00Z",
+          "status": "scheduled",
+          "id": "547",
+          "visitorTeam": {
+            "id": "15",
+            "name": "Black Hawks",
+            "logo": null,
+            "division": "Original Six"
+          },
+          "homeTeam": {
+            "id": "17",
+            "name": "Canadiens",
+            "logo": null,
+            "division": "Original Six"
+          },
+          "time": "8:50 PM",
+          "date": "Jul 12, 2023",
+          "location": "East Rink",
+          "type": "Regular Season",
+          "broadcastProvider": {
+            "broadcaster": "",
+            "link": ""
+          }
+        }
+      ]
+    },
+    {
+      "date": "Sat, Jul 15, 2023 - 1 Game",
+      "games": [
+        {
+          "number": "8",
+          "scheduleStartTime": "2023-07-15T21:00:00Z",
+          "status": "scheduled",
+          "id": "555",
+          "visitorTeam": {
+            "id": "14",
+            "name": "Red Wings",
+            "logo": null,
+            "division": "Original Six"
+          },
+          "homeTeam": {
+            "id": "15",
+            "name": "Black Hawks",
+            "logo": null,
+            "division": "Original Six"
+          },
+          "time": "9:00 PM",
+          "date": "Jul 15, 2023",
+          "location": "West Rink",
+          "type": "Regular Season",
+          "broadcastProvider": {
+            "broadcaster": "",
+            "link": ""
+          }
+        }
+      ]
+    },
+    {
+      "date": "Sat, Jul 22, 2023 - 1 Game",
+      "games": [
+        {
+          "number": "13",
+          "scheduleStartTime": "2023-07-22T22:20:00Z",
+          "status": "scheduled",
+          "id": "577",
+          "visitorTeam": {
+            "id": "20",
+            "name": "Rangers",
+            "logo": null,
+            "division": "Original Six"
+          },
+          "homeTeam": {
+            "id": "15",
+            "name": "Black Hawks",
+            "logo": null,
+            "division": "Original Six"
+          },
+          "time": "10:20 PM",
+          "date": "Jul 22, 2023",
+          "location": "East Rink",
+          "type": "Regular Season",
+          "broadcastProvider": {
+            "broadcaster": "",
+            "link": ""
+          }
+        }
+      ]
+    },
+    {
+      "date": "Sat, Jul 29, 2023 - 1 Game",
+      "games": [
+        {
+          "number": "17",
+          "scheduleStartTime": "2023-07-29T22:20:00Z",
+          "status": "scheduled",
+          "id": "598",
+          "visitorTeam": {
+            "id": "15",
+            "name": "Black Hawks",
+            "logo": null,
+            "division": "Original Six"
+          },
+          "homeTeam": {
+            "id": "16",
+            "name": "Maple Leafs",
+            "logo": null,
+            "division": "Original Six"
+          },
+          "time": "10:20 PM",
+          "date": "Jul 29, 2023",
+          "location": "East Rink",
+          "type": "Regular Season",
+          "broadcastProvider": {
+            "broadcaster": "",
+            "link": ""
+          }
+        }
+      ]
+    },
+    {
+      "date": "Wed, Aug 9, 2023 - 1 Game",
+      "games": [
+        {
+          "number": "22",
+          "scheduleStartTime": "2023-08-09T21:10:00Z",
+          "status": "scheduled",
+          "id": "633",
+          "visitorTeam": {
+            "id": "15",
+            "name": "Black Hawks",
+            "logo": null,
+            "division": "Original Six"
+          },
+          "homeTeam": {
+            "id": "20",
+            "name": "Rangers",
+            "logo": null,
+            "division": "Original Six"
+          },
+          "time": "9:10 PM",
+          "date": "Aug 9, 2023",
+          "location": "East Rink",
+          "type": "Regular Season",
+          "broadcastProvider": {
+            "broadcaster": "",
+            "link": ""
+          }
+        }
+      ]
+    },
+    {
+      "date": "Sat, Aug 12, 2023 - 1 Game",
+      "games": [
+        {
+          "number": "24",
+          "scheduleStartTime": "2023-08-12T19:40:00Z",
+          "status": "scheduled",
+          "id": "639",
+          "visitorTeam": {
+            "id": "19",
+            "name": "Bruins",
+            "logo": null,
+            "division": "Original Six"
+          },
+          "homeTeam": {
+            "id": "15",
+            "name": "Black Hawks",
+            "logo": null,
+            "division": "Original Six"
+          },
+          "time": "7:40 PM",
+          "date": "Aug 12, 2023",
+          "location": "West Rink",
+          "type": "Regular Season",
+          "broadcastProvider": {
+            "broadcaster": "",
+            "link": ""
+          }
+        }
+      ]
+    },
+    {
+      "date": "Sat, Aug 19, 2023 - 1 Game",
+      "games": [
+        {
+          "number": "28",
+          "scheduleStartTime": "2023-08-19T19:40:00Z",
+          "status": "scheduled",
+          "id": "659",
+          "visitorTeam": {
+            "id": "14",
+            "name": "Red Wings",
+            "logo": null,
+            "division": "Original Six"
+          },
+          "homeTeam": {
+            "id": "15",
+            "name": "Black Hawks",
+            "logo": null,
+            "division": "Original Six"
+          },
+          "time": "7:40 PM",
+          "date": "Aug 19, 2023",
+          "location": "West Rink",
+          "type": "Regular Season",
+          "broadcastProvider": {
+            "broadcaster": "",
+            "link": ""
+          }
+        }
+      ]
+    },
+    {
+      "date": "Sat, Aug 26, 2023 - 1 Game",
+      "games": [
+        {
+          "number": "34",
+          "scheduleStartTime": "2023-08-26T22:20:00Z",
+          "status": "scheduled",
+          "id": "681",
+          "visitorTeam": {
+            "id": "17",
+            "name": "Canadiens",
+            "logo": null,
+            "division": "Original Six"
+          },
+          "homeTeam": {
+            "id": "15",
+            "name": "Black Hawks",
+            "logo": null,
+            "division": "Original Six"
+          },
+          "time": "10:20 PM",
+          "date": "Aug 26, 2023",
+          "location": "East Rink",
+          "type": "Regular Season",
+          "broadcastProvider": {
+            "broadcaster": "",
+            "link": ""
+          }
+        }
+      ]
+    }
+  ]
+}

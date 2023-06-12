@@ -1,0 +1,6 @@
+fastapi
+pydantic
+gunicorn
+uvicorn
+semver
+ics
