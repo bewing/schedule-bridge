@@ -97,6 +97,7 @@ async def gamesheet(
                     summary=f"{translate(game['visitorTeam']['name'])} at {translate(game['homeTeam']['name'])}",
                     begin=dt,
                     duration=timedelta(hours=1),
+                    location=game["location"],
                     uid=f"{season_id}.{game['id']}",
                 )
             )
