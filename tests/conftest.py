@@ -1,7 +1,7 @@
 from fastapi.testclient import TestClient
 import pytest
 
-from app import get_application
+from schedule_bridge import get_application
 
 
 @pytest.fixture

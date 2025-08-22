@@ -1,33 +1,42 @@
-[tool.poetry]
+[project]
 name = "schedule-bridge"
 version = "0.1.0"
 description = "API to ICS translator for sports scheduling"
-authors = ["Brandon Ewing <brandon.ewing@warningg.com>"]
-license = "Apache License 2.0"
+authors = [{ name = "Brandon Ewing", email = "brandon.ewing@warningg.com" }]
+requires-python = ">=3.12"
 readme = "README.md"
-packages = [{include = "app"}]
+license = "Apache-2.0"
+dependencies = [
+    "fastapi",
+    "pydantic",
+    "pydantic-settings",
+    "gunicorn",
+    "uvicorn",
+    "semver",
+    "ics==0.8.0dev",
+    "python-dateutil",
+    "httpx",
+]
 
-[tool.poetry.dependencies]
-python = "^3.10"
-fastapi = "0.96.1"
-pydantic = "~1"
-gunicorn = "^20.1.0"
-uvicorn = "^0.22.0"
-semver = "^3.0.0"
-ics = "0.8.0dev"
-python-dateutil = "^2.8.2"
-httpx = "^0.24.1"
+[dependency-groups]
+test = [
+    "respx",
+    "pytest",
+]
+dev = [
+    "ruff",
+    "pre-commit",
+]
 
+[tool.uv]
+default-groups = [
+    "test",
+    "dev",
+]
 
-[tool.poetry.group.test.dependencies]
-respx = "^0.20.1"
-pytest = "^7.3.2"
-
-
-[tool.poetry.group.dev.dependencies]
-black = "^23.3.0"
-pre-commit = "^3.3.2"
+[tool.uv.build-backend]
+module-root = ""
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["uv_build>=0.8.10,<0.9.0"]
+build-backend = "uv_build"
