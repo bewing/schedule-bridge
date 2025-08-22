@@ -36,10 +36,11 @@ async def daysmart(
         return s
 
     cal = Calendar()
-    teams = {int(o["id"]): o for o in content["included"] if o["type"] == "teams"}
-    locations = {
-        int(o["id"]): o for o in content["included"] if o["type"] == "resources"
-    }
+    if "included" in content:
+        teams = {int(o["id"]): o for o in content["included"] if o["type"] == "teams"}
+        locations = {
+            int(o["id"]): o for o in content["included"] if o["type"] == "resources"
+        }
     for event in content["data"]:
         if not event["attributes"]["publish"]:
             continue
