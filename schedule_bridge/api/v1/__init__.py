@@ -42,7 +42,7 @@ async def daysmart(
             int(o["id"]): o for o in content["included"] if o["type"] == "resources"
         }
     for event in content["data"]:
-        if not event["attributes"]["publish"]:
+        if not all([event["attributes"]["publish"], event["attributes"]["vteam_id"]]):
             continue
         hteam_id = event["attributes"]["hteam_id"]
         vteam_id = event["attributes"]["vteam_id"]
