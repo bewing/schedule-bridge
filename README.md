@@ -14,6 +14,15 @@ My provider gives UTC timestamps of local times (!), so I strip the trailing Z f
 ### Daysmart
 Note:  Daysmart will remove events from their API a few days after they occur.  Benchapp will not automatically remove missing events, but keep this in mind.
 
+### TimeToScore
+TimeToScore already publishes an iCal feed per team, so it is passed through with light edits:
+`/api/v1/timetoscore/{league}/{season_id}/{team_id}.ics` proxies
+`https://stats.{league}.timetoscore.com/team-cal.php?team={team_id}&season={season_id}&format=iCal`
+(take the league, season and team from the team page's iCal link).
+
+Event times are left as-is.  Summaries are normalized to `Away at Home`, `team_from`/`team_to` renames apply to
+summaries and the calendar name, and `X-WR-TIMEZONE` is replaced with `tzstr` (default `America/Chicago`).
+
 ### Deployment
 A Dockerfile is provided.  All else is left as an exercise for the user.
 
