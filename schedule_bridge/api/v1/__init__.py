@@ -2,7 +2,7 @@ from dateutil import tz
 from datetime import datetime, timedelta, timezone
 from typing import Annotated
 from fastapi import APIRouter, Path, Response, Request
-from ics import Calendar, Event
+from ics import Calendar, ContentLine, Event
 
 router = APIRouter()
 
@@ -150,6 +150,8 @@ async def timetoscore(
 
     # TimeToScore event times are correct UTC instants; only the advertised zone is wrong
     for line in cal.extra:
+        if not isinstance(line, ContentLine):
+            continue
         if line.name == "X-WR-TIMEZONE":
             line.value = tzstr
         elif line.name == "X-WR-CALNAME" and team_from and team_to:
