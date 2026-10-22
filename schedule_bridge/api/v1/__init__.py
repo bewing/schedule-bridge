@@ -1,6 +1,7 @@
 from dateutil import tz
 from datetime import datetime, timedelta, timezone
-from fastapi import APIRouter, Response, Request
+from typing import Annotated
+from fastapi import APIRouter, Path, Response, Request
 from ics import Calendar, Event
 
 router = APIRouter()
@@ -102,5 +103,56 @@ async def gamesheet(
                     uid=f"{season_id}.{game['id']}",
                 )
             )
+
+    return CalendarResponse(cal)
+
+
+def _split_matchup(summary: str, location: str | None) -> tuple[str, str] | None:
+    """Split a TimeToScore summary ("{location}  {away} @  {home}") into (away, home)."""
+    if location:
+        summary = summary.removeprefix(location)
+    away, separator, home = summary.partition("@")
+    if not separator:
+        return None
+    return away.strip(), home.strip()
+
+
+@router.get(
+    "/timetoscore/{league}/{season_id}/{team_id}.ics", response_class=CalendarResponse
+)
+async def timetoscore(
+    request: Request,
+    league: Annotated[str, Path(pattern=r"^[a-z0-9-]+$")],
+    season_id: int,
+    team_id: int,
+    tzstr: str = "America/Chicago",
+    team_from: str | None = None,
+    team_to: str | None = None,
+) -> CalendarResponse:
+    client = request.state.client
+    resp = await client.get(
+        f"https://stats.{league}.timetoscore.com/team-cal.php?team={team_id}&season={season_id}&format=iCal"
+    )
+    resp.raise_for_status()
+
+    def translate(s):
+        if team_from and team_to and s == team_from:
+            return team_to
+        return s
+
+    cal = Calendar(resp.text)
+    for event in cal.events:
+        matchup = _split_matchup(event.summary or "", event.location)
+        if matchup is None:
+            continue
+        away, home = matchup
+        event.summary = f"{translate(away)} at {translate(home)}"
+
+    # TimeToScore event times are correct UTC instants; only the advertised zone is wrong
+    for line in cal.extra:
+        if line.name == "X-WR-TIMEZONE":
+            line.value = tzstr
+        elif line.name == "X-WR-CALNAME" and team_from and team_to:
+            line.value = line.value.replace(team_from, team_to)
 
     return CalendarResponse(cal)
