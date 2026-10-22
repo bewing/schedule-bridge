@@ -43,6 +43,7 @@ def test_timetoscore(client, respx_mock):
     assert len(cal.events) == 21
     assert cal.events[0].summary == "Puckin’ Pandas Copper AA at Chiefs"
     assert cal.events[0].begin == datetime(2026, 9, 13, 3, 40, tzinfo=timezone.utc)
+    assert all(event.description is None for event in cal.events)
     assert "X-WR-TIMEZONE:America/Chicago" in resp.text
     assert "US/Pacific" not in resp.text
 

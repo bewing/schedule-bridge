@@ -142,6 +142,8 @@ async def timetoscore(
 
     cal = Calendar(resp.text)
     for event in cal.events:
+        # BenchApp copies DESCRIPTION into the game notes
+        event.description = None
         matchup = _split_matchup(event.summary or "", event.location)
         if matchup is None:
             continue
